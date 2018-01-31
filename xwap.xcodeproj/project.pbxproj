@@ -12,7 +12,34 @@
 		49BC12E9202182410053B313 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BC12E7202182410053B313 /* Main.storyboard */; };
 		49BC12EB202182410053B313 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49BC12EA202182410053B313 /* Assets.xcassets */; };
 		49BC12EE202182410053B313 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BC12EC202182410053B313 /* LaunchScreen.storyboard */; };
+		49BC12FC202182530053B313 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BC12FB202182530053B313 /* ActionViewController.swift */; };
+		49BC12FF202182530053B313 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BC12FD202182530053B313 /* MainInterface.storyboard */; };
+		49BC1303202182530053B313 /* action.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 49BC12F9202182530053B313 /* action.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		49BC1301202182530053B313 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49BC12D8202182410053B313 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49BC12F8202182530053B313;
+			remoteInfo = action;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		49BC1307202182530053B313 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				49BC1303202182530053B313 /* action.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		49BC12E0202182410053B313 /* xwap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xwap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +49,21 @@
 		49BC12EA202182410053B313 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49BC12ED202182410053B313 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49BC12EF202182410053B313 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49BC12F9202182530053B313 /* action.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = action.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		49BC12FB202182530053B313 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
+		49BC12FE202182530053B313 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		49BC1300202182530053B313 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		49BC12DD202182410053B313 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49BC12F6202182530053B313 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				49BC12E2202182410053B313 /* xwap */,
+				49BC12FA202182530053B313 /* action */,
 				49BC12E1202182410053B313 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				49BC12E0202182410053B313 /* xwap.app */,
+				49BC12F9202182530053B313 /* action.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +104,16 @@
 			path = xwap;
 			sourceTree = "<group>";
 		};
+		49BC12FA202182530053B313 /* action */ = {
+			isa = PBXGroup;
+			children = (
+				49BC12FB202182530053B313 /* ActionViewController.swift */,
+				49BC12FD202182530053B313 /* MainInterface.storyboard */,
+				49BC1300202182530053B313 /* Info.plist */,
+			);
+			path = action;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,15 +124,34 @@
 				49BC12DC202182410053B313 /* Sources */,
 				49BC12DD202182410053B313 /* Frameworks */,
 				49BC12DE202182410053B313 /* Resources */,
+				49BC1307202182530053B313 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				49BC1302202182530053B313 /* PBXTargetDependency */,
 			);
 			name = xwap;
 			productName = xwap;
 			productReference = 49BC12E0202182410053B313 /* xwap.app */;
 			productType = "com.apple.product-type.application";
+		};
+		49BC12F8202182530053B313 /* action */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49BC1304202182530053B313 /* Build configuration list for PBXNativeTarget "action" */;
+			buildPhases = (
+				49BC12F5202182530053B313 /* Sources */,
+				49BC12F6202182530053B313 /* Frameworks */,
+				49BC12F7202182530053B313 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = action;
+			productName = action;
+			productReference = 49BC12F9202182530053B313 /* action.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +164,10 @@
 				ORGANIZATIONNAME = hearthedge;
 				TargetAttributes = {
 					49BC12DF202182410053B313 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					49BC12F8202182530053B313 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -114,6 +187,7 @@
 			projectRoot = "";
 			targets = (
 				49BC12DF202182410053B313 /* xwap */,
+				49BC12F8202182530053B313 /* action */,
 			);
 		};
 /* End PBXProject section */
@@ -129,6 +203,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		49BC12F7202182530053B313 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49BC12FF202182530053B313 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -141,7 +223,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		49BC12F5202182530053B313 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49BC12FC202182530053B313 /* ActionViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		49BC1302202182530053B313 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49BC12F8202182530053B313 /* action */;
+			targetProxy = 49BC1301202182530053B313 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		49BC12E7202182410053B313 /* Main.storyboard */ = {
@@ -158,6 +256,14 @@
 				49BC12ED202182410053B313 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		49BC12FD202182530053B313 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49BC12FE202182530053B313 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -273,6 +379,7 @@
 		49BC12F3202182410053B313 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T5E8L2XP69;
@@ -288,6 +395,7 @@
 		49BC12F4202182410053B313 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T5E8L2XP69;
@@ -295,6 +403,36 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = land.ashp.xwap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		49BC1305202182530053B313 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T5E8L2XP69;
+				INFOPLIST_FILE = action/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = land.ashp.xwap.action;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		49BC1306202182530053B313 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T5E8L2XP69;
+				INFOPLIST_FILE = action/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = land.ashp.xwap.action;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -317,6 +455,15 @@
 			buildConfigurations = (
 				49BC12F3202182410053B313 /* Debug */,
 				49BC12F4202182410053B313 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49BC1304202182530053B313 /* Build configuration list for PBXNativeTarget "action" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49BC1305202182530053B313 /* Debug */,
+				49BC1306202182530053B313 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
